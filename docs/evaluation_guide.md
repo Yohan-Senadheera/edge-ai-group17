@@ -79,38 +79,7 @@ Prepare a 3-5 minute demo:
 4. Force anomaly and show alert
 5. Show repository commits + report
 
-## 4) What lecturer usually checks during evaluation/demo
-To score well, make sure evaluators can clearly see these in order:
-1. **Live simulation is running** (values changing every few seconds)
-2. **MQTT topic correctness** (`sensors/.../data` and `alerts/.../status`)
-3. **Edge AI decision** (normal vs alert) is made in local Python
-4. **Dashboard reacts live** (chart, gauge, text)
-5. **Proof in GitHub** (multiple commits over multiple days)
-
-## 5) Demo simulation script (say + do this in front of lecturer)
-
-### Step A - Start services
-- `docker-compose up --build`
-- Show Node-RED at `http://localhost:1880` and dashboard at `http://localhost:1880/ui`
-
-### Step B - Start data simulation
-- Run publisher script and explain: "This simulates light sensor values."
-- Show changing JSON in terminal or Node-RED debug panel.
-
-### Step C - Show edge AI logic
-- Explain simple rule: if `lux < 5` or `lux > 900`, publish alert.
-- Show terminal prints: NORMAL / ALERT.
-
-### Step D - Force an anomaly
-- Temporarily send a bad value (example `lux=950`).
-- Show alert topic message: `alerts/group17/lighting/status`.
-- Show dashboard text color/status changes to ALERT.
-
-### Step E - Close with outcomes
-- Show chart history, current gauge, and alert count/status.
-- Show GitHub commits and `docs/report`.
-
-## 6) Scoring strategy (how to maximize marks)
+## 4) Scoring strategy (how to maximize marks)
 
 - **System functionality (25):** stable end-to-end data flow demo
 - **Edge AI (20):** clear local intelligence logic with explanation
@@ -120,7 +89,7 @@ To score well, make sure evaluators can clearly see these in order:
 - **Documentation (10):** complete README + 5-10 page report
 - **Innovation (5):** one extra feature (e.g., adaptive threshold, notification)
 
-## 7) Minimum README checklist
+## 5) Minimum README checklist
 Your `README.md` must include:
 - Project Title
 - Group Members
@@ -132,7 +101,7 @@ Your `README.md` must include:
 - Challenges
 - Future Improvements
 
-## 8) Minimum report checklist (docs/report.pdf or docs/report.md)
+## 6) Minimum report checklist (docs/report.pdf or docs/report.md)
 - Problem statement
 - Architecture diagram
 - Implementation details (Python + Node-RED + MQTT)
@@ -141,7 +110,7 @@ Your `README.md` must include:
 - Challenges and fixes
 - Conclusion and future work
 
-## 9) Commit plan (important for marks)
+## 7) Commit plan (important for marks)
 Do not upload everything at the end. Use frequent commits, for example:
 - `setup docker compose and project structure`
 - `add mqtt publisher for light data`
@@ -149,14 +118,14 @@ Do not upload everything at the end. Use frequent commits, for example:
 - `implement anomaly alert logic`
 - `add final report and screenshots`
 
-## 10) Common mistakes to avoid
+## 8) Common mistakes to avoid
 - No `docs/` folder
 - Missing screenshots in README
 - Publishing to wrong MQTT topics
 - Doing AI in cloud instead of local Python
 - One big last-day commit
 
-## 11) Simple task split for your 3-member team
+## 9) Simple task split for your 3-member team
 - **Member A:** Python publisher + edge AI rules
 - **Member B:** Node-RED flow + dashboard UI
 - **Member C:** Documentation + integration testing + GitHub hygiene
