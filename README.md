@@ -51,3 +51,6 @@ Sensor Simulator → Python Edge AI → MQTT Broker → Node-RED → Dashboard
 - Integration with real LDR sensor on ESP32
 - TensorFlow Lite model for better occupancy prediction
 - Mobile notifications for alerts
+## Quick Help
+- See `docs/evaluation_guide.md` for a step-by-step 14-day execution plan aligned with marking criteria.
+- Includes a lecturer-focused demo simulation script (see section 5 in the guide).
